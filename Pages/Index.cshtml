@@ -1,0 +1,125 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .item1 { grid-area: header; }
+    .item2 { grid-area: topic1; }
+    .item3 { grid-area: topic2; }
+    .item4 { grid-area: topic3; }
+    
+    .item5 { grid-area: topic; }
+    .item6 { grid-area: content1; }
+    .item7 { grid-area: content2; }
+    .item8 { grid-area: content3; }
+    .item9 { grid-area: footer; }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'topic1'
+            'topic2'
+            'topic3'
+            'footer';
+        grid-gap: 25px;
+        padding: 10px;
+    }
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 100%;
+        }
+
+    .grid-container-topic {
+        display: grid;
+        grid-template-areas:
+            'topic topic'
+            'content1 content2' 
+            'content3 content3';
+    }
+</style> 
+
+<body>
+    <div class="grid-container">
+        <!--Header-->
+        <div class="item1">
+            <b>Anders Børjesson (anbo) <br />
+            Cand.scient. i Matematik og Datalogi <br />
+            Lektor på Datamatiker-uddannelsen<br />
+            Zealand, Sjællands Erhvervsakademi, Roskilde</b><br />
+            <br />
+            <b>Contact Info: </b><br />
+            Address (Work): Maglegårdsvej 2, 4000 Roskilde<br />
+            E-mail (Work): anbo@zealand.dk<br />
+            Resume: (<a href="https://anbo-easj.dk/cv/">CV</a>)
+        </div>
+        <!--Topic 1 starts here-->
+        <div class="item2" style="background-color: lightskyblue; outline:5px ridge lightskyblue">
+            <div class="grid-container-topic">
+                <div class="item5">
+                    Teaching Autumn - 2019
+                </div>
+                <div class="item6" style="background-color:white; border: 5px solid lightskyblue">
+                    Datamatiker<br /><a href="https://docs.google.com/document/d/e/2PACX-1vQnP5GDXd2YmuUapbnNgaUAK-4gsDtZGDl-qZT-g3xsUCSvPhfr1OTdo7esf_b3qm3ypfQSwMuz5Mab/pub">Programmering 3sem</a><br /><br />
+                    4th Sem, Comp. Science<br /><a href="https://docs.google.com/document/d/e/2PACX-1vQSdR7ZSr7DfFCc8SC0tSqz8VaLKHN8LCGRmfxTFVnl1GgkHnk_Wr_-7r_Lr5EX-qpOt7sBzo6SmHH0/pub">Mobile Application Development</a>
+                </div>
+                <div class="item7" style="background-color: white; border: 5px solid lightskyblue">
+                    5th Sem, Comp. Science<br /><a href="https://anbo-easj.dk/internship/index.html">Internship</a><br /><br />
+                    Dissertations, Comp. Science<br /><a href="https://anbo-easj.dk/dissertation2020spring/">Dissertation course</a>
+                </div>
+            </div>
+        </div>
+        <!--Topic 1 ends here-->
+        <!--Topic 2 starts here-->
+        <div class="item3" style="background-color: lightgreen; outline: 5px ridge lightgreen">
+            <div class="grid-container-topic">
+                <div class="item5">
+                    Teaching Spring - 2019
+                </div>
+                <div class="item6" style="background-color: white; border: 5px solid lightgreen; border-bottom-width: 0px; border-right-width: 0px;">
+                    4th Sem, Comp. Science<br /><a href="https://anbo-easj.dk/mobile2019spring/index.html">Mobile Application Development</a><br /><br />
+
+                </div>
+                <div class="item7" style="background-color: white; border: 5px solid lightgreen; border-bottom-width: 0px; border-left-width: 0px;">
+                    5th Sem, Comp. Science<br /><a href="https://anbo-easj.dk/internship/index.html">Internship</a>
+                </div>
+                <div class="item8" style="background-color: white; border: 5px solid lightgreen; border-top-width: 0px;">
+                    Dissertations, Computer Science<br /><a href="https://anbo-easj.dk/dissertation2019spring/">Dissertation course</a>
+                </div>
+            </div>
+        </div>
+        <!--Topic 2 ends here-->
+        <!--Topic 3 starts here-->
+        <div class="item4" style="background-color: lightgoldenrodyellow; outline: 5px ridge lightgoldenrodyellow ">
+            <div class="grid-container-topic">
+                <div class="item5">
+                    Teaching Autumn - 2018
+                </div>
+                <div class="item6" style="background-color: white; border: 5px solid lightgoldenrodyellow">
+                    3rd Sem, Comp. Science<br /><a href="https://anbo-easj.dk/prog3_2018autumn/index.html">Programming</a><br /><br />
+                    4th Sem, Comp. Science<br /><a href="https://anbo-easj.dk/mobile2018autumn/index.html">Mobile Application Development</a>
+                </div>
+                <div class="item7" style="background-color: white; border: 5px solid lightgoldenrodyellow">
+                    Internship<br /><a href="https://anbo-easj.dk/internship/index.html">Internship</a><br /><br />
+                    Dissertations, Comp. Science<br /><a href="https://anbo-easj.dk/dissertation2018autumn/">Dissertation course</a>
+                </div>
+            </div>
+        </div>
+        <!--Topic 3 ends here-->
+        <!--Footer-->
+        <div class="item9">
+            Additional Links:<br />
+            <a href="https://msdn.microsoft.com/en-us/default.aspx">Microsoft Developer Network</a><br />
+            <a href="https://msdn.microsoft.com/en-us/library/default.aspx">MSDN Library: Intro til programmeringssprog mv.</a><br />
+            <a href="https://anbo-easj.dk/bekendtgoerelser/">Bekendtgørelser</a> om Datamatiker-uddannelsen, eksamen og lign.<br />
+            <a href="https://anbo-easj.dk/index.htm">Index</a>
+        </div>
+    </div>
+</body>
+
+<div class="text-center">
+    
+</div>
